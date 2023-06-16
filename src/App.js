@@ -10,7 +10,7 @@ function App() {
   }
   return (
     <div className="App">
-     work
+     Luba is Arrived! I love you
      <button onClick={onClose}>Закрыть</button>
     </div>
   );
