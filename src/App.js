@@ -10,7 +10,7 @@ function App() {
   }
   return (
     <div className="App">
-     Luba is Arrived! I love you
+     There will be WebApp
      <button onClick={onClose}>Закрыть</button>
     </div>
   );
