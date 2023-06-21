@@ -12,8 +12,9 @@ function App() {
 
   return (
     <div className="App">
-     There will be WebApp
-     <button onClick={onToggleButton}>Toggle</button>
+      <Header /> 
+      There will be WebApp
+      <button onClick={onToggleButton}>Toggle</button>
     </div>
   );
 }
