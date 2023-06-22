@@ -2,14 +2,14 @@ import React from "react"
 import './Challenge.css'
 import Button from "../Button/Button"
 
-const Challenge = (challenge, className) => {
+const Challenge = (challenge) => {
 
     const finishHandler = () => {
-        
+
     }
     
     return (
-        <div className={"challenge" + className}>
+        <div className={"challenge"}>
             <div className={"img"}/>
             <div className={"title"}>{challenge.title}</div>
             <div className={"points"}>{challenge.points}</div>
