@@ -13,7 +13,6 @@ function App() {
     tg.ready();
   }, [])
 
-
   return (
     <div className="App">
       <Header />
