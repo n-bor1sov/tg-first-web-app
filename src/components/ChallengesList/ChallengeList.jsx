@@ -13,6 +13,8 @@ import { useTelegram } from "../../hooks/useTelegram";
 const challenges = [
     {id: 0, title:"Swimmer", description: "Get 10 hours in the swimming pool", points: 10},
     {id: 1, title:"MJ", description: "Get 10 hours on the Basketball", points: 15},
+    {id: 2, title:"MJ", description: "Get 10 hours on the Basketball", points: 15},
+    {id: 3, title:"MJ", description: "Get 10 hours on the Basketball", points: 15},
 ]
 
 const ChallengeList = () => {
