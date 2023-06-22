@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import './ChallengeList.css'
 import Challenge from "../Challenge/Challenge";
-import Challenge from "../Challenge/Challenge";
 import { useTelegram } from "../../hooks/useTelegram";
 
 
@@ -34,10 +33,7 @@ const ChallengeList = () => {
             {challenges.map(item => (
                 <Challenge
                     challenge = {item}
-                    points = {item.points}
-                    title = {item.title}
                     className={'item'}
-                    description={item.description}
                 />
             ))}        
         </div>

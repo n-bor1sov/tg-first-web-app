@@ -7,6 +7,7 @@ const Challenge = (challenge, className) => {
     const finishHandler = () => {
         
     }
+    
     return (
         <div className={"challenge" + className}>
             <div className={"img"}/>
