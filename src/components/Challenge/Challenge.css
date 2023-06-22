@@ -2,13 +2,22 @@
     display: flex;
     flex-direction: raw;
     border: 3px solid var(--tg-theme-button-color);
-    padding: 15px;
+    padding: 10px;
+    margin: 10px;
     width: 350px;
 }
-.module {
+.challenge-mid-module {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    width: 110px;
+}
+
+.challenge-side-module {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 70px;
 }
 
 .img {
