@@ -22,13 +22,3 @@
     background: var(--tg-theme-button-color);
     border-radius: 10px;
   }
-  
-  
-  @keyframes animationLoaded{
-    0%{
-      width: 0%;
-    }
-    100%{
-      width: 100%;
-    }
-  }
