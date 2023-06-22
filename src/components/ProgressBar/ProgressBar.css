@@ -3,22 +3,22 @@
     flex-direction: column;
   }
   
-  .progress-bar .line{
+.line{
     height: 15px;
     background: #e8e8e8;
     border-radius: 7px;
     position: relative;
-  }
+}
   
-  .progress-bar .label{
+.progress-bar{
     font-size: 30px;
-  }
+}
   
-  .progress-bar > .line > span{
+span{
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     background: var(--tg-theme-button-color);
     border-radius: 10px;
-  }
+}
