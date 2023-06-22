@@ -10,13 +10,21 @@ const Challenge = (item) => {
     
     return (
         <div className={"challenge"}>
-            <div className={"img"}/>
-            <div className={"title"}>{item.challenge.title}</div>
-            <div className={"points"}>{item.challenge.points}</div>
-            <div className={"description"}>{item.challenge.description}</div>
-            <Button className={"finish-chellange"} onClick={finishHandler}>
-                Done
-            </Button>
+            <div className={"module"}>
+                <div className={"img"}/>
+                <div className={"points"}>{item.challenge.points}</div>
+            </div>
+            <div className={"module"}>
+                <div className={"title"}>{item.challenge.title}</div>
+                <div className={"description"}>{item.challenge.description}</div>
+            </div>
+            <div className={"module"}>
+                <Button className={"finish-chellange"} onClick={finishHandler}>
+                    Done
+                </Button>
+            </div>
+            
+            
         </div>
     )
 };
