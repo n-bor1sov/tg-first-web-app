@@ -3,10 +3,11 @@ import './App.css';
 import { useTelegram } from "./hooks/useTelegram";
 import Header from "./components/Header/Header";
 import ChallengeList from "./components/ChallengesList/ChallengeList";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 function App() {
 
-  const {tg, onToggleButton} = useTelegram();
+  const {tg} = useTelegram();
 
   useEffect( () => {
     tg.ready();
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ProgressBar />
       <ChallengeList />
     </div>
   );
