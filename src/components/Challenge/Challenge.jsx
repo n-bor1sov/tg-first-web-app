@@ -2,7 +2,7 @@ import React from "react"
 import './Challenge.css'
 import Button from "../Button/Button"
 
-const Challenge = (challenge) => {
+const Challenge = (item) => {
     console.log(challenge);
     const finishHandler = () => {
 
@@ -11,9 +11,9 @@ const Challenge = (challenge) => {
     return (
         <div className={"challenge"}>
             <div className={"img"}/>
-            <div className={"title"}>{challenge.title}</div>
-            <div className={"points"}>{challenge.points}</div>
-            <div className={"description"}>{challenge.description}</div>
+            <div className={"title"}>{item.challenge.title}</div>
+            <div className={"points"}>{item.challenge.points}</div>
+            <div className={"description"}>{item.challenge.description}</div>
             <Button className={"finish-chellange"} onClick={finishHandler}>
                 Done
             </Button>
