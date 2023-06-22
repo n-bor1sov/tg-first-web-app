@@ -4,8 +4,8 @@ import React from "react"
 const ProgressBar = () => {
   return (
     <div class="progress-bar">
-        <div class="label" data-count="60">100%</div>
-        <div class="line" style="width:500px">
+        <div class="label">100%</div>
+        <div class="line">
             <span></span>
         </div>
     </div>
