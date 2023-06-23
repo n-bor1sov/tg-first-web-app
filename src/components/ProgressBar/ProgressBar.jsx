@@ -3,12 +3,12 @@ import React, {useState} from "react"
 
 const ProgressBar = () => {
 
-  const progerss = 60;
+  const progress = 60;
 
   return (
     <div class="container">
       <div class="progress-bar">
-        <div className="progerss-bar-fill" style={{ width: `${progerss}%`}}></div>
+        <div className="progerss-bar-fill" style={{ width: `${progress}%`}}></div>
       </div>
       <div className="progress-label">{progress}%</div>
     </div>
