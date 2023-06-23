@@ -31,8 +31,8 @@ const ProgressBar = () => {
         <div className="progerss-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}></div>
       </div>
       <div className="progress-label">{progress}%</div>
-      <button onClick={handleButtonClick}>Progress</button>
-      <button onClick={handleButtonReset}>Reset</button>
+      <button className="button" onClick={handleButtonClick}>Progress</button>
+      <button className="button" onClick={handleButtonReset}>Reset</button>
     </div>
   )
 };
