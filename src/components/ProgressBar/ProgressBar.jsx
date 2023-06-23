@@ -3,7 +3,7 @@ import React, {useState} from "react"
 
 const ProgressBar = () => {
 
-  const [progress, setProgress] = useState(20);
+  const [progress, setProgress] = useState(0);
 
   const handleButtonClick = () => {
     if (progress < 100) {
