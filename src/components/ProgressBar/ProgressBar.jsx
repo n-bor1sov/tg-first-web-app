@@ -1,9 +1,9 @@
 import React, {useState} from "react"
-//import './ProgressBar.css'
+import './ProgressBar.css'
 
 const ProgressBar = () => {
 
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(50);
 
   const handleButtonClick = () => {
     if (progress < 100) {
@@ -28,11 +28,9 @@ const ProgressBar = () => {
   return (
     <div class="container">
       <div class="progress-bar">
-        <div className="progerss-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}></div>
+         <div className="progress-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}></div>
       </div>
       <div className="progress-label">{progress}%</div>
-      <button className="button" onClick={handleButtonClick}>Progress</button>
-      <button className="button" onClick={handleButtonReset}>Reset</button>
     </div>
   )
 };
