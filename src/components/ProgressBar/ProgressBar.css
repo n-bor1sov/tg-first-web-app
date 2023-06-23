@@ -1,24 +1,23 @@
+.container{
+    width: 100%;
+}
 .progress-bar{
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+    background-color: var(--tg-theme-secondary-color);
   }
   
-.line{
-    height: 15px;
-    background: #e8e8e8;
-    border-radius: 7px;
-    position: relative;
-}
-  
-.progress-bar{
-    font-size: 30px;
-}
-  
-span{
-    position: absolute;
-    left: 0;
-    top: 0;
+.progress-bar-fill{
     height: 100%;
-    background: var(--tg-theme-button-color);
+    background: #e8e8e8;
     border-radius: 10px;
+    transition: width 0.5s ease-out;
 }
+  
+.progress-label {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+  
