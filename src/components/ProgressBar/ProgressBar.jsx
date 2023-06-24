@@ -1,19 +1,11 @@
 import React, {useState} from "react"
 import './ProgressBar.css'
 
-const ProgressBar = () => {
+const ProgressBar = (hours, needHours) => {
 
   const [progress, setProgress] = useState(50);
 
-  const handleButtonClick = () => {
-    if (progress < 100) {
-      setProgress(progress + 20);
-    }
-  }
-
-  const handleButtonReset = () => {
-    setProgress(0);
-  }
+  
 
   const getColor = () => {
     if(progress < 40) {
@@ -26,11 +18,11 @@ const ProgressBar = () => {
   }
 
   return (
-    <div class="container">
-      <div class="progress-bar">
-         <div className="progress-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}></div>
+    <div className="container">
+      <div className="bar-name">Sport Hours</div>
+      <div className="progress-bar">
+         <div className="progress-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}>{50}</div>
       </div>
-      <div className="progress-label">{progress}%</div>
     </div>
   )
 };

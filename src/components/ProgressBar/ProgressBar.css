@@ -1,5 +1,5 @@
 .container{
-    width: 350px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -8,23 +8,23 @@
 }
 .progress-bar{
     padding: 2px;
-    width: 200px;
+    width: 100%;
     border: 5px solid;
     height: 50px;
     border-radius: 10px;
-    /* background-color: black; */
   }
   
 .progress-bar-fill{
     height: 100%;
     border-radius: 10px;
-    background-color: black; 
     transition: width 0.5s ease-out;
+    text-align: center;
+    font-size: 30px;
 }
   
 .progress-label {
     height: 30%;
-    font-weight: bold;
+    
 }
 
 .button {
@@ -35,5 +35,12 @@
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.bar-name {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
 }
   
