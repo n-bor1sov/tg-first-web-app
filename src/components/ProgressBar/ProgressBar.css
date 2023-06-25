@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 30px;
 }
 .progress-bar{
     width: 100%;
