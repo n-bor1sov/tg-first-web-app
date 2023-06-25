@@ -34,7 +34,7 @@ const ChallengeList = () => {
         <div className={"list"}>
             {challenges.map(item => (
                 <Challenge
-                    challenge = {item}
+                    challenge={item}
                     className={'item'}
                 />
             ))}        
