@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import './ChallengeList.css'
 import Challenge from "../Challenge/Challenge";
 import { useTelegram } from "../../hooks/useTelegram";
+import Button from "../Button/Button";
 
 
 // const dataBase = {
@@ -31,14 +32,24 @@ const ChallengeList = () => {
     // }
 
     return (
-        <div className={"list"}>
-            {challenges.map(item => (
-                <Challenge
-                    challenge={item}
-                    className={'item'}
-                />
-            ))}        
+        <div className="container">
+            <div className="challenge-list-head">
+                <div className="title">Challenges</div>
+                <div className="buttons-container">
+                    <Button>All Challenges</Button>
+                    <Button>My Challenges</Button>
+                </div>
+            </div>
+            <div className={"list"}>
+                {challenges.map(item => (
+                    <Challenge
+                        challenge={item}
+                        className={'item'}
+                    />
+                ))}        
+            </div>
         </div>
+        
   )
 };
 

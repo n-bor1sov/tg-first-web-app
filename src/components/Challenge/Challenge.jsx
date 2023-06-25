@@ -3,7 +3,7 @@ import './Challenge.css'
 import Button from "../Button/Button"
 
 const Challenge = (item) => {
-    console.log(item);
+    // console.log(item);
     const finishHandler = () => {
 
     }
