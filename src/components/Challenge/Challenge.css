@@ -1,6 +1,6 @@
 .challenge {
     display: flex;
-    flex-direction: raw;
+    flex-direction: row;
     border: 3px solid var(--tg-theme-button-color);
     padding: 10px;
     margin: 10px;
