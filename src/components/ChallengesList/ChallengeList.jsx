@@ -28,7 +28,9 @@ const ChallengeList = () => {
 
     console.log(dataBase.users)
     
-    const client = dataBase.users.find({id: 894797521});
+    const client = dataBase.users.find((e) => {
+        return e.id == 894797521;
+    });
 
     console.log(client)
 
