@@ -19,9 +19,9 @@ const Challenge = (item) => {
             <ProgressBar
                 type = "Challenge Bar"
                 name = {item.challenge.info.title}
-                need = {item.challenge.progress.need}
-                actual = {item.challenge.progress.progress}
-                description = {item.challenge.info.description}
+                need = {item.challenge.info.need}
+                actual = {item.challenge?.progress?.progress}
+                description = {item.challenge?.info?.description}
             />  
             </div>
             <div className={"challenge-side-module"}>

@@ -25,19 +25,16 @@ const ChallengeList = () => {
     let finished = [];
 
     const {user} = useTelegram();
-
-    console.log(dataBase.users)
     
     const client = dataBase.users.find((e) => {
         return e.id == 894797521;
     });
 
-    console.log(client)
 
     client.challenges.forEach(e => {
         if(e.isFinished) {
             finished.push({
-                info: challenges[e.id]
+                info: challenges[e.id],
             });
         } else {
             inProcess.push({
@@ -47,54 +44,45 @@ const ChallengeList = () => {
         }
     })
     let challengesStatus = "inProcess";
-    let actualChallenges = [];
 
+    const [listContent, setListContent] = useState(inProcess.map(item => (
+        <Challenge
+            challenge={item}
+            className={'item'}
+        />
+    )));
+
+    const showMyChallenges = () => {
+        setListContent(finished.map(item => (
+            <Challenge
+                challenge={item}
+                className={'item'}
+            />
+        )))
+    }
+
+    const showAllChallenges = () => {
+        setListContent(inProcess.map(item => (
+            <Challenge
+                challenge={item}
+                className={'item'}
+            />
+        )));  
+    }
     
 
-    if(challengesStatus == "inProcess") {
-        return (
-            <div className="container">
-                <div className="challenge-list-head">
-                    <div className="title">Challenges</div>
-                    <div className="buttons-container">
-                        <Button>All Challenges</Button>
-                        <Button>My Challenges</Button>
-                    </div>
-                </div>
-                <div className={"list"}>
-                    {
-                        inProcess.map(item => (
-                            <Challenge
-                                challenge={item}
-                                className={'item'}
-                            />
-                        ))
-                    }        
-                </div>
-            </div>
-            
-        )
-    } else if(challengesStatus == "finished") {
+    return (
         <div className="container">
-                <div className="challenge-list-head">
-                    <div className="title">Challenges</div>
-                    <div className="buttons-container">
-                        <Button>All Challenges</Button>
-                        <Button>My Challenges</Button>
-                    </div>
-                </div>
-                <div className={"list"}>
-                    {
-                        finished.map(item => (
-                            <Challenge
-                                challenge={item}
-                                className={'item'}
-                            />
-                        ))
-                    }        
+            <div className="challenge-list-head">
+                <div className="title">Challenges</div>
+                <div className="buttons-container">
+                    <Button onClick={showAllChallenges}>All Challenges</Button>
+                    <Button onClick={showMyChallenges}>My Challenges</Button>
                 </div>
             </div>
-    }
+            <div className={"list"}>{listContent}</div>
+        </div>
+    )
 };
 
 export default ChallengeList;
