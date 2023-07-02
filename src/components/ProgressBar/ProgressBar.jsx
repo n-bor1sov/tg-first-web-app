@@ -3,7 +3,7 @@ import './ProgressBar.css'
 
 const ProgressBar = (props) => {
   
-  console.log(props);
+  //console.log(props);
 
   let progress = 0;
   let measurableProgress = 0;

@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: 100%;
+    height: 100%; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -10,16 +10,16 @@
 .progress-bar{
     width: 100%;
     border: 5px solid;
-    height: 50px;
-    border-radius: 10px;
+    height: 30%;
+    border-radius: 20px;
   }
   
 .progress-bar-fill{
     height: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: width 0.5s ease-out;
     text-align: center;
-    font-size: 30px;
+    font-size:medium;
 }
   
 .progress-label {
