@@ -20,9 +20,6 @@ const ProgressBar = (props) => {
     console.log("bad bar type recognission");
   }
 
-
-  
-
   const getColor = () => {
     if(progress < 40) {
       return "#ff0000";

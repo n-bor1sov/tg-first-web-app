@@ -4,7 +4,7 @@ import Button from "../Button/Button"
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const Challenge = (item) => {
-    // console.log(item);
+    console.log(item);
     const finishHandler = () => {
 
     }
@@ -20,8 +20,8 @@ const Challenge = (item) => {
                     type = "Challenge Bar"
                     name = {item.challenge.info.title}
                     need = {item.challenge.info.need}
-                    actual = {item.challenge?.progress?.progress}
-                    description = {item.challenge?.info?.description}
+                    actual = {item.challenge.progress?.progress}
+                    description = {item.challenge.info?.description}
                 />  
             </div>
             <div className={"challenge-side-module"}>

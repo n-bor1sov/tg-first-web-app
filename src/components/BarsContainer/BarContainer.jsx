@@ -13,7 +13,9 @@ const BarContainer = () => {
                 needHours = "30"
                 hours = "12"
                 description = ""
-            />   
+            />
+            <br/>
+            <br/>  
             <ProgressBar
                 type = "Sport points"
                 name = "Sport points"
