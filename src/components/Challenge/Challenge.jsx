@@ -11,11 +11,11 @@ const Challenge = (item) => {
     
     return (
         <div className={"challenge"}>
-            <div className={"challenge-side-module"}>
+            <div className={"challenge-left-module"}>
                 <div className={"img"}/>
-                <div className={"points"}>{item.challenge.points}</div>
+                <div className={"points"}>{item.challenge.info.points} points</div>
             </div>
-            <div className={"challenge-mid-module"}>
+            <div className={"challenge-right-module"}>
                 <ProgressBar
                     type = "Challenge Bar"
                     name = {item.challenge.info.title}
@@ -24,13 +24,6 @@ const Challenge = (item) => {
                     description = {item.challenge.info?.description}
                 />  
             </div>
-            <div className={"challenge-side-module"}>
-                <Button className={"finish-chellange"} onClick={finishHandler}>
-                    Done
-                </Button>
-            </div>
-            
-            
         </div>
     )
 };

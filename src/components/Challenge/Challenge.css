@@ -8,24 +8,32 @@
     margin-bottom: 10px;
     height: 100px;
 }
-.challenge-mid-module {
+.challenge-right-module {
     display: flex;
     flex-direction: column;
     padding: 5px;
-    
+    width: 70%;
 }
 
-.challenge-side-module {
+.challenge-left-module {
     display: flex;
     flex-direction: column;
     padding: 5px;
-    min-width: 25%;
+    min-width: 30%;
 }
 
 .img {
     width: 100%;
     background: lightgray;
-    height: 100px;
+    height: 80%;
     margin:0 auto;
     background: var(--tg-theme-button-color);
+}
+
+.points {
+    text-align: center;
+    font-size: auto;
+    min-height: 20%;
+    border: 3px bold black;
+    border-radius: 5px;
 }
