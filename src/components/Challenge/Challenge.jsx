@@ -16,13 +16,13 @@ const Challenge = (item) => {
                 <div className={"points"}>{item.challenge.points}</div>
             </div>
             <div className={"challenge-mid-module"}>
-            <ProgressBar
-                type = "Challenge Bar"
-                name = {item.challenge.info.title}
-                need = {item.challenge.info.need}
-                actual = {item.challenge?.progress?.progress}
-                description = {item.challenge?.info?.description}
-            />  
+                <ProgressBar
+                    type = "Challenge Bar"
+                    name = {item.challenge.info.title}
+                    need = {item.challenge.info.need}
+                    actual = {item.challenge?.progress?.progress}
+                    description = {item.challenge?.info?.description}
+                />  
             </div>
             <div className={"challenge-side-module"}>
                 <Button className={"finish-chellange"} onClick={finishHandler}>

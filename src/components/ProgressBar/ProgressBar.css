@@ -10,16 +10,16 @@
 .progress-bar{
     width: 100%;
     border: 5px solid;
-    height: 100%;
-    border-radius: 10px;
+    height: 30px;
+    border-radius: 20px;
   }
   
 .progress-bar-fill{
     height: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: width 0.5s ease-out;
     text-align: center;
-    font-size: 30px;
+    font-size:medium;
 }
   
 .progress-label {
