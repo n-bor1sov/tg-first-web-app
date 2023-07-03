@@ -3,7 +3,7 @@ import './Challenge.css'
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const images = [
-    "https://drive.google.com/file/d/1z4JhN_sD9_MGObMxEKgGLoyeuIWETmpU/view?usp=drive_link",
+    "../static/0.png",
     "https://drive.google.com/file/d/1Wm4C6J0E9CJsvvErnanLYtN1utRW9t0e/view?usp=drive_link",
     "https://drive.google.com/file/d/1zik4O9WGaKcgyBfs0gW28HS8dnWunWeu/view?usp=drive_link",
     "https://drive.google.com/file/d/1TmCxD6t9xt8DvIZVFtjNH7Mb2PeOr8Er/view?usp=drive_link"

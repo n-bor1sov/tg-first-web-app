@@ -16,6 +16,7 @@
 }
 
 .challenge-left-module {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     padding: 5px;
