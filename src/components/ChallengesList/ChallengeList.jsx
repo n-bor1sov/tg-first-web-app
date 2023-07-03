@@ -6,8 +6,8 @@ import Button from "../Button/Button";
 
 
 const challenges = [
-    {id: 0, title:"Top Sportsmen S23", description: "To complete the challenge Top Sportsmen you need to get 50 sport hours during the Spring23 semester. Top 10 students from this challenge will get additional reward - 10 xp and 2 gemNote: In case if several people has the same amount of hour, the one who got them faster will be in the higher position", points: 40, gems:10, need: 50},
-    {id: 1, title:"Top Sportsmen Sum23", description: "To complete the challenge Top Sportsmen you need to get 30 sport hours during the Summer23 semester. Top 10 students from this challenge will get additional reward - 10 xp and 1 gem. Note: In case if several people has the same amount of hour, the one who got them faster will be in the higher position", points: 20, gems: 5, need: 30},
+    {id: 0, title:"Top Sportsmen S23", description: "To complete the challenge Top Sportsmen you need to get 50 sport hours during the Spring23 semester. Top 10 students from this challenge will get additional reward - 10 xp and 2 gem.", points: 40, gems:10, need: 50},
+    {id: 1, title:"Top Sportsmen Sum23", description: "To complete the challenge Top Sportsmen you need to get 30 sport hours during the Summer23 semester. Top 10 students from this challenge will get additional reward - 10 xp and 1 gem.", points: 20, gems: 5, need: 30},
     {id: 2, title:"Table Tennis Competition", description: "Top 3 places in the competition will get additional reward - 10 xp. Contact about the event: Table Tennis Club Leader", points: 20, gems: 0, need:1},
     {id: 3, title:"Football lover", description: "To complete the Football lover challenge you need to participate in 20 Football training sessions during Fall 2023 semester", points: 15, gems: 0, need: 20},
 ]
