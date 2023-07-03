@@ -23,9 +23,9 @@
 }
 
 img {
-    width: 150px;
+    width: 100%px;
     background: lightgray;
-    height: 150px;
+    height: 80%;
     margin:0 auto;
     background: var(--tg-theme-button-color);
 }
