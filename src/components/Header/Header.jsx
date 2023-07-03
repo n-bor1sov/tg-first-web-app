@@ -17,8 +17,8 @@ const Header = () => {
                     after authentification
                 </div>
                 <div className='lvl-gems'>
-                    <div className='lvl'>${dataBase.users[0].level} lvl</div>
-                    <div className='gems'>${dataBase.users[0].gems} gems</div>
+                    <div className='lvl'>{dataBase.users[0].level} lvl</div>
+                    <div className='gems'>{dataBase.users[0].gems} gems</div>
                 </div>
             </div>
 
