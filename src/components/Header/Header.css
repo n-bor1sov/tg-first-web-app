@@ -20,13 +20,15 @@
     flex-direction: row;
 }
 .lvl {
-    margin-right: 10px;
-    text-align: center;
+    padding-right: 5%;
+    width: 50%;
+    text-align: start;
     font-size: 20px;
 }
 
 .gems {
-    margin-left: 10px;
-    text-align: center;
+    padding-left: 5%;
+    width: 50%;
+    text-align: end;
     font-size: 20px;
 }
