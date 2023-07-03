@@ -13,7 +13,10 @@ const Challenge = (item) => {
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
                 <div className={"img"}/>
-                <div className={"points"}>{item.challenge.info.points} points</div>
+                <div className="rewards">
+                    <div className={"points"}>{item.challenge.info.points} points</div>
+                    <div className={"gems"}>{item.challenge.info.gems} gems</div>
+                </div>
             </div>
             <div className={"challenge-right-module"}>
                 <ProgressBar
