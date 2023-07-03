@@ -8,7 +8,7 @@ export function useTelegram() {
             hours: 14,
             gems: 10,
             sxp: 20,
-            challenges: [{id: 0, progress: 37, need: 50, isFinished: false}, {id: 1, progress: 10, need: 30, isFinished: false}, {id: 2, progress: 1, need: 1, isFinished: true}, {id: 3, progress: 5, need: 20, isFinished: false}]
+            challenges: [{id: 0, progress: 37, need: 50, isFinished: false}, {id: 1, progress: 19, need: 30, isFinished: false}, {id: 2, progress: 1, need: 1, isFinished: true}, {id: 3, progress: 5, need: 20, isFinished: false}]
         }
         ]
     }
