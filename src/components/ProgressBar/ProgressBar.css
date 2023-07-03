@@ -9,7 +9,7 @@
 }
 .progress-bar{
     width: 100%;
-    border: 3px solid;
+    border: 3px solid var(--tg-theme-button-color);
     min-height: 25%;
     border-radius: 20px;
   }
