@@ -1,6 +1,5 @@
 import React from "react"
 import './Challenge.css'
-import Button from "../Button/Button"
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 const images = [
@@ -12,12 +11,10 @@ const images = [
 
 const Challenge = (item) => {
     console.log(item);
-    const finishHandler = () => {
-    }
     return (
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
-                <img src={images[item.challenge.info.id]} alt="There should be a challenge reward picture" />
+                <img src={images[item.challenge.info.id]} alt="Сhallenge reward picture" />
                 <div className="rewards">
                     <div className={"points"}>{item.challenge.info.points} points</div>
                     <div className={"gems"}>{item.challenge.info.gems} gems</div>
