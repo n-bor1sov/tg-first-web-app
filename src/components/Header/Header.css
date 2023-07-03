@@ -20,6 +20,8 @@
     flex-direction: row;
 }
 .lvl {
+    border: 3px var(--tg-theme-button-color);
+    border-radius: 5px;
     padding-right: 5%;
     width: 50%;
     text-align: start;
@@ -27,6 +29,8 @@
 }
 
 .gems {
+    border: 3px var(--tg-theme-button-color);
+    border-radius: 5px;
     padding-left: 5%;
     width: 50%;
     text-align: end;
