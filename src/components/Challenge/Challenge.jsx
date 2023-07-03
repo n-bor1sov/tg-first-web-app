@@ -17,7 +17,7 @@ const Challenge = (item) => {
                 <img src={images[item.challenge.info.id]} alt="Сhallenge reward picture" />
                 <div className="rewards">
                     <div className={"points"}>{item.challenge.info.points} points</div>
-                    <div className={"gems"}>{item.challenge.info.gems} gems</div>
+                    <div className={"gems-ch"}>{item.challenge.info.gems} gems</div>
                 </div>
             </div>
             <div className={"challenge-right-module"}>
