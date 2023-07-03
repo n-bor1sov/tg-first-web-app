@@ -10,7 +10,7 @@ const Challenge = (item) => {
     return (
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
-                <img src={"src/components/static/" + item.challenge.info.id + ".png"} alt="There should be a challenge reward picture" />
+                <img src={"../static/" + item.challenge.info.id + ".png"} alt="There should be a challenge reward picture" />
                 <div className="rewards">
                     <div className={"points"}>{item.challenge.info.points} points</div>
                     <div className={"gems"}>{item.challenge.info.gems} gems</div>
