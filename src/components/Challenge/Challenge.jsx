@@ -1,6 +1,7 @@
 import React from "react"
 import './Challenge.css'
 import ProgressBar from "../ProgressBar/ProgressBar";
+import firstImage from "../static/0.png"
 
 const images = [
     "../static/0.png",
@@ -14,7 +15,7 @@ const Challenge = (item) => {
     return (
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
-                <img src={images[item.challenge.info.id]} alt="Сhallenge reward picture" />
+                <img src={firstImage} alt="Сhallenge reward picture" />
                 <div className="rewards">
                     <div className={"points"}>{item.challenge.info.points} points</div>
                     <div className={"gems-ch"}>{item.challenge.info.gems} gems</div>

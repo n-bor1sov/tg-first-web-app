@@ -5,6 +5,7 @@ import { useTelegram } from "../../hooks/useTelegram";
 import Button from "../Button/Button";
 
 
+
 const challenges = [
     {id: 0, title:"Top Sportsmen S23", description: "To complete the challenge Top Sportsmen you need to get 50 sport hours during the Spring23 semester. Top 10 students from this challenge will get additional reward - 10 xp and 2 gem. Note: In case if several people has the same amount of hour, the one who got them faster will be in the higher position.", points: 40, gems:10, need: 50},
     {id: 1, title:"Top Sportsmen Sum23", description: "To complete the challenge Top Sportsmen you need to get 30 sport hours during the Summer23 semester. Top 10 students from this challenge will get additional reward - 10 xp and 1 gem. Note: In case if several people has the same amount of hour, the one who got them faster will be in the higher position.", points: 20, gems: 5, need: 30},
