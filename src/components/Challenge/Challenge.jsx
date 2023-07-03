@@ -6,13 +6,11 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 const Challenge = (item) => {
     console.log(item);
     const finishHandler = () => {
-
     }
-    
     return (
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
-                <div className={"img"}/>
+                <img className={"img"} src={"../static/" + item.challenge.info.id + ".png"} alt="There should be a challenge reward picture" />
                 <div className="rewards">
                     <div className={"points"}>{item.challenge.info.points} points</div>
                     <div className={"gems"}>{item.challenge.info.gems} gems</div>
