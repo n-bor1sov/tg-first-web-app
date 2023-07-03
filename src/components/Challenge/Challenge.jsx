@@ -2,12 +2,16 @@ import React from "react"
 import './Challenge.css'
 import ProgressBar from "../ProgressBar/ProgressBar";
 import firstImage from "../static/0.png"
+import secondImage from "../static/1.png"
+import thirdImage from "../static/2.png"
+import fourthImage from "../static/3.png"
+
 
 const images = [
-    "../static/0.png",
-    "https://drive.google.com/file/d/1Wm4C6J0E9CJsvvErnanLYtN1utRW9t0e/view?usp=drive_link",
-    "https://drive.google.com/file/d/1zik4O9WGaKcgyBfs0gW28HS8dnWunWeu/view?usp=drive_link",
-    "https://drive.google.com/file/d/1TmCxD6t9xt8DvIZVFtjNH7Mb2PeOr8Er/view?usp=drive_link"
+    firstImage,
+    secondImage,
+    thirdImage,
+    fourthImage
 ]
 
 const Challenge = (item) => {
@@ -15,7 +19,7 @@ const Challenge = (item) => {
     return (
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
-                <img src={firstImage} alt="Сhallenge reward picture" />
+                <img src={images[item.challenge.info.id]} alt="Сhallenge reward picture" />
                 <div className="rewards">
                     <div className={"points"}>{item.challenge.info.points} points</div>
                     <div className={"gems-ch"}>{item.challenge.info.gems} gems</div>

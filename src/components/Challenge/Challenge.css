@@ -25,7 +25,6 @@
 
 img {
     width: 70px;
-    background: lightgray;
     height: 70px;
     margin:0 auto;
     background: var(--tg-theme-button-color);
