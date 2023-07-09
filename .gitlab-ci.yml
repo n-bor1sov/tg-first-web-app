@@ -13,14 +13,14 @@ unit-test-job:
   stage: test 
   image: node
   script:
-    - npm install jest
+    - npm install
     - npm test
 
 lint-test-job:
   stage: test
   image: node
   script:
-    - npm install eslint eslint-plugin-react --save-dev
+    - npm install
     - npm run lint 
 
 deploy-job:      # This job runs in the deploy stage.
