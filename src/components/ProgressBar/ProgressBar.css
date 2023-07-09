@@ -19,7 +19,8 @@
     border-radius: 20px;
     transition: width 0.5s ease-out;
     text-align: center;
-    font-size:auto;
+    padding: 0.25em;
+    font-size: 1.5em;
 }
   
 .progress-label {
