@@ -38,8 +38,8 @@ const ProgressBar = (props) => {
     <div className="container">
       <div className="bar-name">{props.name}</div>
       <div className={"description"}>{props.description}</div>
-      <div data-testid="fill-bar"  className="progress-bar">
-         <div className="progress-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}>{measurableProgress}/{need}</div>
+      <div className="progress-bar">
+         <div data-testid="fill-bar"  className="progress-bar-fill" style={{ width: `${progress}%`, backgroundColor: getColor()}}>{measurableProgress}/{need}</div>
       </div>
     </div>
   )
