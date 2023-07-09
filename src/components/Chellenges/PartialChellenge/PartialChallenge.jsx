@@ -20,13 +20,13 @@ const PartialChallenge = (data) => {
         return description.slice(0,50) + "...";
     }
 
-    const clickHandler = () => {
+    // const clickHandler = () => {
 
-    }
+    // }
     return (
         <div className={"challenge"}>
             <div className={"challenge-left-module"}>
-                <img src={images[data.content.challenge.info.id]} alt="Сhallenge reward picture" />
+                <img src={images[data.content.challenge.info.id]} alt="Сhallenge reward" />
                 <div className="rewards">
                     <div className={"points"}>{data.content.challenge.info.points} points</div>
                     <div className={"gems-ch"}>{data.content.challenge.info.gems} gems</div>

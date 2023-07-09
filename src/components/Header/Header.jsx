@@ -1,10 +1,9 @@
 import React from 'react'
 import './Header.css'
-import Button from '../Button/Button';
 import { useTelegram } from '../../hooks/useTelegram';
 
 const Header = () => {
-    const {user, onClose, dataBase} = useTelegram();
+    const {user, dataBase} = useTelegram();
 
     return (
         <div className={"wrapper"}>

@@ -58,9 +58,4 @@ const Challenge = (item) => {
     );  
 };
 
-export function Challenge() {
-    return {
-        Challenge,
-        setChallengeContent
-    }
-};
+export default Challenge;

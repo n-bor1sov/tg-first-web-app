@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { getByTestId, render } from '@testing-library/react'; 
+import { render } from '@testing-library/react'; 
 // your component that you want to test 
 import BarContainer from '../src/components/BarsContainer/BarContainer';
 describe('BarContainer', () => { 

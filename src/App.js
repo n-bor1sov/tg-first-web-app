@@ -1,9 +1,9 @@
 import { useEffect } from "react";
+import React from "react"
 import './App.css';
 import { useTelegram } from "./hooks/useTelegram";
 import Header from "./components/Header/Header";
 import ChallengeList from "./components/ChallengesList/ChallengeList";
-import ProgressBar from "./components/ProgressBar/ProgressBar";
 import BarContainer from "./components/BarsContainer/BarContainer";
 
 function App() {
