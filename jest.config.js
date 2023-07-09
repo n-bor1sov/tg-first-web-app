@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   testEnvironment: 'jsdom', 
   testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'], // Паттерны для поиска тестовых файлов
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'], // Расширения файлов, которые могут быть импортированы в тестах
