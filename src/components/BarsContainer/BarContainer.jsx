@@ -1,12 +1,11 @@
 import React, { useState } from "react"
 import './BarContainer.css'
 import ProgressBar from "../ProgressBar/ProgressBar";
-import { useTelegram } from "../../hooks/useTelegram";
 
 const BarContainer = () => {
 
     return (
-        <div className={"list"}>
+        <div data-testid="list-of-two-progress-bars" className={"list"}>
             <ProgressBar
                 type = "Sport hours"
                 name = "Sport hours"

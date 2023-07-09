@@ -44,6 +44,7 @@ const ChallengeList = () => {
         <Challenge
             challenge={item}
             className={'item'}
+            type="Partial"
         />
     )));
 
@@ -52,6 +53,7 @@ const ChallengeList = () => {
             <Challenge
                 challenge={item}
                 className={'item'}
+                type="Partial"
             />
         )))
     }
@@ -61,11 +63,11 @@ const ChallengeList = () => {
             <Challenge
                 challenge={item}
                 className={'item'}
+                type="Partial"
             />
         )));  
     }
     
-
     return (
         <div className="container">
             <div className="challenge-list-head">

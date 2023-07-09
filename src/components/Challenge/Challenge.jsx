@@ -1,41 +1,66 @@
-import React from "react"
+import React, { useState } from "react"
 import './Challenge.css'
-import ProgressBar from "../ProgressBar/ProgressBar";
-import firstImage from "../static/0.png"
-import secondImage from "../static/1.png"
-import thirdImage from "../static/2.png"
-import fourthImage from "../static/3.png"
-
-
-const images = [
-    firstImage,
-    secondImage,
-    thirdImage,
-    fourthImage
-]
+import PartialChallenge from "../Chellenges/PartialChellenge/PartialChallenge";
 
 const Challenge = (item) => {
-    console.log(item);
+    
+    const clickHandler = () => {
+        if(item.type == "Partial") {
+            console.log("Hi");
+            setChallengeContent(
+            <PartialChallenge
+                content={item}
+                onClickHandler={clickHandler}
+            />);
+        } else if (item.type == "Full") {
+            setChallengeContent(
+                <FullChallenge
+                    content={item}
+                    onClickHandler={clickHandler}
+                />);
+        } else if (item.type == "LB") {
+            setChallengeContent(
+                <LBChallenge
+                    content={item}
+                    onClickHandler={clickHandler}
+                />);
+        }
+    }
+
+    const [challengeContent, setChallengeContent] = useState(() => {
+        if(item.type == "Partial") {
+            console.log("Hi");
+            return(
+            <PartialChallenge
+                content={item}
+                onClickHandler={clickHandler}
+            />);
+        } else if (item.type == "Full") {
+            return(
+                <FullChallenge
+                    content={item}
+                    onClickHandler={clickHandler}
+                />);
+        } else if (item.type == "LB") {
+            return(
+                <LBChallenge
+                    content={item}
+                    onClickHandler={clickHandler}
+                />);
+        }
+    });
+
+    console.log(challengeContent);
     return (
-        <div className={"challenge"}>
-            <div className={"challenge-left-module"}>
-                <img src={images[item.challenge.info.id]} alt="Сhallenge reward picture" />
-                <div className="rewards">
-                    <div className={"points"}>{item.challenge.info.points} points</div>
-                    <div className={"gems-ch"}>{item.challenge.info.gems} gems</div>
-                </div>
-            </div>
-            <div className={"challenge-right-module"}>
-                <ProgressBar
-                    type = "Challenge Bar"
-                    name = {item.challenge.info.title}
-                    need = {item.challenge.info.need}
-                    actual = {item.challenge.progress?.progress}
-                    description = {item.challenge.info?.description}
-                />  
-            </div>
+        <div>
+            {challengeContent}
         </div>
-    )
+    );  
 };
 
-export default Challenge;
+export function Challenge() {
+    return {
+        Challenge,
+        setChallengeContent
+    }
+};
