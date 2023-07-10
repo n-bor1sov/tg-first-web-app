@@ -1,9 +1,22 @@
-import React, {useState} from "react"
+import React from "react"
 import './ProgressBar.css'
+import PropTypes from 'prop-types';
+
+
 
 const ProgressBar = (props) => {
   
-  //console.log(props);
+  ProgressBar.propTypes = {
+    type: PropTypes.string.isRequired,
+    hours: PropTypes.number.isRequired,
+    needHours: PropTypes.number.isRequired,
+    points: PropTypes.number.isRequired,
+    needPoints: PropTypes.number.isRequired,
+    actual: PropTypes.number.isRequired,
+    need: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  };
 
   let progress = 0;
   let measurableProgress = 0;

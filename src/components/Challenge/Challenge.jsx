@@ -14,16 +14,18 @@ const Challenge = (item) => {
             />);
         } else if (item.type == "Full") {
             setChallengeContent(
-                <FullChallenge
-                    content={item}
-                    onClickHandler={clickHandler}
-                />);
+                // <FullChallenge
+                //     content={item}
+                //     onClickHandler={clickHandler}
+                // />
+                );
         } else if (item.type == "LB") {
             setChallengeContent(
-                <LBChallenge
-                    content={item}
-                    onClickHandler={clickHandler}
-                />);
+                // <LBChallenge
+                //     content={item}
+                //     onClickHandler={clickHandler}
+                // />
+                );
         }
     }
 
@@ -36,17 +38,19 @@ const Challenge = (item) => {
                 onClickHandler={clickHandler}
             />);
         } else if (item.type == "Full") {
-            return(
-                <FullChallenge
-                    content={item}
-                    onClickHandler={clickHandler}
-                />);
+            return(""
+                // <FullChallenge
+                //     content={item}
+                //     onClickHandler={clickHandler}
+                // />
+                );
         } else if (item.type == "LB") {
-            return(
-                <LBChallenge
-                    content={item}
-                    onClickHandler={clickHandler}
-                />);
+            return(""
+                // <LBChallenge
+                //     content={item}
+                //     onClickHandler={clickHandler}
+                // />
+                );
         }
     });
 

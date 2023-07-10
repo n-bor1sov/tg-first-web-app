@@ -18,7 +18,7 @@ const ChallengeList = () => {
     let inProcess = [];
     let finished = [];
 
-    const {user, dataBase} = useTelegram();
+    const {dataBase} = useTelegram();
     
     const client = dataBase.users.find((e) => {
         return e.id == 894797521;
@@ -38,10 +38,10 @@ const ChallengeList = () => {
             });
         }
     })
-    let challengesStatus = "inProcess";
 
     const [listContent, setListContent] = useState(inProcess.map(item => (
         <Challenge
+            key={null}
             challenge={item}
             className={'item'}
             type="Partial"
@@ -51,6 +51,7 @@ const ChallengeList = () => {
     const showMyChallenges = () => {
         setListContent(finished.map(item => (
             <Challenge
+                key={null}
                 challenge={item}
                 className={'item'}
                 type="Partial"
@@ -62,6 +63,7 @@ const ChallengeList = () => {
         setListContent(inProcess.map(item => (
             <Challenge
                 challenge={item}
+                key={null}
                 className={'item'}
                 type="Partial"
             />
