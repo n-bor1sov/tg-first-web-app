@@ -20,7 +20,7 @@
       "jest": true
     },
     "rules": {
-        
+      "react/jsx-key": "off"
     },
     "settings": {
         "import/resolver": {

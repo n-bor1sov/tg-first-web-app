@@ -6,13 +6,14 @@
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
+    display: inline-flex;
     height: 200px;
 }
 .challenge-center-module {
     display: flex;
     flex-direction: column;
     padding: 5px;
-    width: 45%;
+    width: 75%;
 }
 
 .challenge-right-module {
