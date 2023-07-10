@@ -47,6 +47,6 @@ img {
     display: flex;
     width: 100%;
     text-align: center;
-    border: 3px solid var(--tg-theme-button-color)k;
+    border: 3px solid var(--tg-theme-button-color);
     border-radius: 5px;
 }
