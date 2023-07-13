@@ -21,11 +21,14 @@ const Challenge = (item) => {
             <div className={"challenge-left-module"}>
                 <img src={images[item.challenge.info.id]} alt="Сhallenge reward" />
                 <div className="rewards">
-                    <div className={"points"}>{item.challenge.info.points} points</div>
-                    <div className={"gems-ch"}>{item.challenge.info.gems} gems</div>
+                    <div className={"points"}>{item.challenge.info.points} XP</div>
+                    <div className={"gems-ch"}>{item.challenge.info.gems} SP</div>
                 </div>
             </div>
             <div className={"challenge-right-module"}>
+                <div className="button-container">
+                    <button className="expand-button">More</button>
+                </div>
                 <ProgressBar
                     type = "Challenge Bar"
                     name = {item.challenge.info.title}
