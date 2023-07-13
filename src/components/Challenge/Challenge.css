@@ -61,7 +61,7 @@ img {
 .button-container{
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .expand-button {
     width: 3em;
