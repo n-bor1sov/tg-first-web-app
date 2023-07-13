@@ -18,7 +18,6 @@
 }
 
 .lvl-sp {
-    align-items: center;
     width: 65%;
     display: flex;
     flex-direction: row;
@@ -28,13 +27,11 @@
 .lvl {
     border: 3px var(--tg-theme-button-color);
     border-radius: 5px;
-    padding-right: 5%;
     width: 50%;
-    text-align: start;
     font-size: 20px;
     display: flex;
     flex-direction: row;
-    margin: 0em 4em;
+    justify-content: center;
     /* border: 3px solid var(--tg-theme-button-color);
     border-radius: 5px; */
 }
@@ -42,14 +39,16 @@
 .sp {
     border: 3px var(--tg-theme-button-color);
     border-radius: 5px;
-    padding-left: 5%;
     width: 50%;
-    text-align: end;
     font-size: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     /* border: 3px solid var(--tg-theme-button-color);
     border-radius: 5px; */
+}
+.v-container{
+    display: flex;
 }
 .number {
     color: #FFFFFF;

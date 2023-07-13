@@ -17,16 +17,20 @@ const Header = () => {
                 </div>
                 <div className='lvl-sp'>
                     <div className='lvl'>
-                        <div className="number">
-                            {dataBase.users[0].level} 
+                        <div className="v-container">
+                            <div className="number">
+                                {dataBase.users[0].level} 
+                            </div>
+                            <p>lvl</p>
                         </div>
-                        <p>lvl</p>
                     </div>
                     <div className='sp'>
+                        <div className="v-container">
                         <div className="number">
                             {dataBase.users[0].gems} 
                         </div>
                         <p>sp</p>
+                        </div>
                     </div>
                 </div>
             </div>
