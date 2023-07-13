@@ -12,6 +12,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
 }
 .challenge-list-head {
     display: flex;

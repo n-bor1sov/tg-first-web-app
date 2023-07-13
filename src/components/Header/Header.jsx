@@ -15,9 +15,19 @@ const Header = () => {
                     There will be inno email<br/>
                     after authentification
                 </div>
-                <div className='lvl-gems'>
-                    <div className='lvl'>{dataBase.users[0].level} lvl</div>
-                    <div className='gems'>{dataBase.users[0].gems} gems</div>
+                <div className='lvl-sp'>
+                    <div className='lvl'>
+                        <div className="number">
+                            {dataBase.users[0].level} 
+                        </div>
+                        <p>lvl</p>
+                    </div>
+                    <div className='sp'>
+                        <div className="number">
+                            {dataBase.users[0].gems} 
+                        </div>
+                        <p>sp</p>
+                    </div>
                 </div>
             </div>
 
