@@ -6,7 +6,7 @@
     padding: 10px;
     width: 90%;
     margin-bottom: 10px;
-    height: 200px;
+    height: 150px;
     background: #000000;
 }
 
@@ -16,12 +16,12 @@
     flex-direction: column;
     justify-content: center;
 }
-.challenge-center-module {
+/* .challenge-center-module {
     display: flex;
     flex-direction: column;
     padding: 5px;
     width: 100%;
-}
+} */
 
 .challenge-right-module {
     display: flex;
