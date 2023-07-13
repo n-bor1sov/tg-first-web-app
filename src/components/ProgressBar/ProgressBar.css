@@ -8,11 +8,13 @@
     font-family: 'Inter', sans-serif;
     /* margin-bottom: 30px; */
 }
+
 .progress-bar{
     width: 100%;
     border: 2px solid #FFFFFF;
     height: 2em;
     border-radius: 20px;
+    background: #000000;
   }
   
 .progress-bar-fill{

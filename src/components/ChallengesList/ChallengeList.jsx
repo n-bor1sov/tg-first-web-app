@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import './ChallengeList.css'
 import Challenge from "../Challenge/Challenge";
 import { useTelegram } from "../../hooks/useTelegram";
-import Button from "../Button/Button";
 
 
 
@@ -17,6 +16,8 @@ const ChallengeList = () => {
 
     let inProcess = [];
     let finished = [];
+
+    const [challengeState, setChallengeState] = useState("all");
 
     const {dataBase} = useTelegram();
     
@@ -47,6 +48,7 @@ const ChallengeList = () => {
     )));
 
     const showMyChallenges = () => {
+        setChallengeState("my");
         setListContent(finished.map(item => (
             <Challenge
                 challenge={item}
@@ -56,6 +58,7 @@ const ChallengeList = () => {
     }
 
     const showAllChallenges = () => {
+        setChallengeState("all");
         setListContent(inProcess.map(item => (
             <Challenge
                 challenge={item}
@@ -70,8 +73,8 @@ const ChallengeList = () => {
             <div className="challenge-list-head">
                 <div className="title">Challenges</div>
                 <div className="buttons-container">
-                    <Button onClick={showAllChallenges}>All Challenges</Button>
-                    <Button onClick={showMyChallenges}>My Challenges</Button>
+                    <button className={(challengeState == 'all') ? "button-pushed" : "button-base"} onClick={showAllChallenges}>All Challenges</button>
+                    <button className={(challengeState == 'my') ? "button-pushed" : "button-base"} onClick={showMyChallenges}>My Challenges</button>
                 </div>
             </div>
             <div className={"list"}>{listContent}</div>
