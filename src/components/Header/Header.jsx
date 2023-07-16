@@ -7,8 +7,8 @@ import { useTelegram } from "../../hooks/useTelegram";
  * @returns
  */
 
-const getClient = async (userID) => {
-    let client = await fetch("http://45.131.96.241:5000/client/" + String(userID), {
+const getClient = async () => {
+    let client = await fetch("http://45.131.96.241:5000/client/" + "894797521", {
       method: "get",
       headers: {
         "Content-Type": "application/json",
