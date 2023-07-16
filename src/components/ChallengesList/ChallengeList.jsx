@@ -1,85 +1,143 @@
-import React, { useState } from "react"
-import './ChallengeList.css'
+import React, { useState } from "react";
+import "./ChallengeList.css";
 import Challenge from "../Challenge/Challenge";
 import { useTelegram } from "../../hooks/useTelegram";
 
+const getClient = async (userID) => {
+  let client = await fetch("http://45.131.96.241:5000/client/" + String(userID), {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  return client.json();
+};
 
+const getChallenges = async () => {
+  let challenges = await fetch("http://45.131.96.241:5000/challenges", {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  return challenges.json();
+};
 
-const challenges = [
-    {id: 0, title:"Top Sportsmen S23", description: "Get 50 sport hours", points: 40, gems:10, need: 50},
-    {id: 1, title:"Top Sportsmen Sum23", description: "Get 30 sport hours", points: 20, gems: 5, need: 30},
-    {id: 2, title:"Table Tennis Competition", description: "Participate in the competition", points: 20, gems: 0, need:1},
-    {id: 3, title:"Football lover", description: "Visit 20 Football trainings", points: 15, gems: 0, need: 20},
-]
+// const finishChallenge = async (userID, sp, xp, challengeID) => {
+//     let result = await fetch("http://localhost:5000/reward", {
+//       method: "post",
+//       body: JSON.stringify({
+//         uID : userID,
+//         sPoints: sp,
+//         xPoints: xp,
+//         chID: challengeID
+//         }),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     });
+//     result = await result.json();
+//     if (result) {
+//         console.log("Data saved succesfully");
+//     }
+//   };
 
 const ChallengeList = () => {
+  const {user} = useTelegram();
+  const userID = user?.id;
 
-    let inProcess = [];
-    let finished = [];
+  const [data, setData] = useState([]);
+  const [challengeState, setChallengeState] = useState("all");
 
-    const [challengeState, setChallengeState] = useState("all");
+  React.useEffect(() => {
+    const loadData = async () => {
 
-    const {dataBase} = useTelegram();
+      const client = await getClient(userID);
+      const challenges = await getChallenges();
+
+      let _data = []; 
+
+    //   const goalCalc = (goal) => {
+    //     let sumGoal = 0;
+    //     for (var key in goal) {
+    //       sumGoal += goal[key];
+    //     }
+    //     return sumGoal;
+    //   };
     
-    const client = dataBase.users.find((e) => {
-        return e.id == 894797521;
-    });
+    //   const progressCalc = (certain_hours, full_hours, goal) => {
+    //     let sumProgress = 0;
+    //     for (var key in goal) {
+    //       if (goal[key] > 0) {
+    //         if (key != "Summary Hours") {
+    //           sumProgress += certain_hours[key];
+    //         } else {
+    //           sumProgress += full_hours;
+    //         }
+    //       }
+    //     }
+    //     return sumProgress;
+    //   };
+      challenges.forEach(async (e) => {
+        // if(progressCalc(client.certain_hours, client.full_hours, e.goal) >= goalCalc(e.goal) && !client.challenge[e.id]) {
+        //     await finishChallenge(client.id, e.sp, e.xp, e.id);
+        // }
+        _data.push({
+          info: e,
+          certain_hours: client.certain_hours,
+          sum_hours: client.full_hours,
+          isFinished: client.challenge[e.id],
+        });
+      });
 
+      setData(_data);
+    };
 
-    client.challenges.forEach(e => {
-        if(e.isFinished) {
-            finished.push({
-                info: challenges[e.id],
-                progress: e
-            });
-        } else {
-            inProcess.push({
-                info: challenges[e.id],
-                progress: e
-            });
-        }
-    })
+    loadData();
+  }, []);
 
-    const [listContent, setListContent] = useState(inProcess.map(item => (
-        <Challenge
-            challenge={item}
-            className={'item'}
-        />
-    )));
+  const showMyChallenges = () => {
+    setChallengeState("my");
+  };
 
-    const showMyChallenges = () => {
-        setChallengeState("my");
-        setListContent(finished.map(item => (
-            <Challenge
-                challenge={item}
-                className={'item'}
-            />
-        )))
-    }
+  const showAllChallenges = () => {
+    setChallengeState("all");
+  };
 
-    const showAllChallenges = () => {
-        setChallengeState("all");
-        setListContent(inProcess.map(item => (
-            <Challenge
-                challenge={item}
-                className={'item'}
-            />
-        )));  
-    }
-    
-
-    return (
-        <div className="container">
-            <div className="challenge-list-head">
-                <div className="title">Challenges</div>
-                <div className="buttons-container">
-                    <button className={(challengeState == 'all') ? "button-pushed" : "button-base"} onClick={showAllChallenges}>All Challenges</button>
-                    <button className={(challengeState == 'my') ? "button-pushed" : "button-base"} onClick={showMyChallenges}>My Challenges</button>
-                </div>
-            </div>
-            <div className={"list"}>{listContent}</div>
+  return (
+    <div className="container">
+      <div className="challenge-list-head">
+        <div className="title">Challenges</div>
+        <div className="buttons-container">
+          <button
+            className={
+              challengeState == "all" ? "button-pushed" : "button-base"
+            }
+            onClick={showAllChallenges}
+          >
+            All Challenges
+          </button>
+          <button
+            className={challengeState == "my" ? "button-pushed" : "button-base"}
+            onClick={showMyChallenges}
+          >
+            Completed
+          </button>
         </div>
-    )
+      </div>
+      <div className={"list"}>
+        {data
+          .filter((e) => (e.isFinished == (challengeState == "all" ? false : true))) 
+          .map(
+            (
+              item,
+            ) => (
+              <Challenge challenge={item} className={"item"} />
+            ),
+          )}
+      </div>
+    </div>
+  );
 };
 
 export default ChallengeList;

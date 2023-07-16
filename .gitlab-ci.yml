@@ -1,16 +1,16 @@
-stages:        # List of stages for jobs, and their order of execution
+stages: # List of stages for jobs, and their order of execution
   - build
   - test
   - deploy
 
-build-job:     # This job runs in the build stage, which runs first.
+build-job: # This job runs in the build stage, which runs first.
   stage: build
   script:
     - echo "Compiling the code..."
     - echo "Compile complete."
 
-unit-test-job: 
-  stage: test 
+unit-test-job:
+  stage: test
   image: node
   script:
     - npm install
@@ -21,10 +21,10 @@ lint-test-job:
   image: node
   script:
     - npm install
-    - npm run lint 
+    - npm run lint
 
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # Runs if *both* previous jobs complete successfully.
+deploy-job: # This job runs in the deploy stage.
+  stage: deploy # Runs if *both* previous jobs complete successfully.
   environment: production
   script:
     - echo "Deploying application..."

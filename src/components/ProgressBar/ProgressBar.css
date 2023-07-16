@@ -1,54 +1,62 @@
-.container{
-    width: 100%;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
 }
 
-.progress-bar{
-    width: 100%;
-    border: 2px solid #FFFFFF;
-    height: 2em;
-    border-radius: 20px;
-    background: #000000;
-  }
-  
-.progress-bar-fill{
-    height: 100%;
-    border-radius: 18px;
-    transition: width 0.5s ease-out;
-    text-align: center;
-    padding: 0.25em;
-    font-size: 1.5em;
+.progress-bar {
+  width: 100%;
+  border: 2px solid #ffffff;
+  height: 2em;
+  border-radius: 20px;
+  background: #000000;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 25px;
+  transition: width 0.5s ease-out;
+  text-align: center;
+  padding: 0.25em;
+  font-size: 1.5em;
+}
+.hide {
+  width: 0;
 }
 
 .progress-value {
-    position:relative;
-    width: 100%;
-    text-align: center;
-    top: -80%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  top: -80%;
 }
-  
+
+.progress-value-zero {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
 .progress-label {
-    height: 30%;
+  height: 30%;
 }
 
 .bar-name {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: larger;
-    font-family: 'Inter', sans-serif;
-    font-weight: 100;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
 }
 
 .description {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-    font-weight: 50;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-weight: 50;
 }
-  
