@@ -37,7 +37,8 @@
 .button-base {
   margin: 5px;
   padding: 10px 15px;
-  background: #acb334;
+  width: 6rem;
+  background: #333507;
   border: 0px solid;
   color: #ffffff;
   border-radius: 10px;
@@ -47,6 +48,7 @@
 .button-pushed {
   margin: 5px;
   padding: 10px 15px;
+  width: 6rem;
   background: #1c8020;
   text-decoration: underline;
   color: #ffffff;

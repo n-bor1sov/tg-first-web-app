@@ -445,7 +445,7 @@ const ChallengeList = () => {
             }
             onClick={showAllChallenges}
           >
-            All Challenges
+            All
           </button>
           <button
             className={challengeState == "my" ? "button-pushed" : "button-base"}
