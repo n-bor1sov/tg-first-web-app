@@ -1,11 +1,8 @@
-// const tg = window.Telegram.WebApp;
-// tg.initDataUnsafe?.user
+const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
 
     return {
-        user:{
-          id: 894797521
-        }
+        user: tg.initDataUnsafe?.user
     }
 }

@@ -7,8 +7,8 @@ import { useTelegram } from "../../hooks/useTelegram";
  * @returns
  */
 
-const getClient = async () => {
-    let client = await fetch("http://45.131.96.241:5000/client/" + "894797521", {
+const getClient = async (userID) => {
+    let client = await fetch("http://45.131.96.241:5000/client/" + String(userID), {
       method: "get",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const Header = () => {
     React.useEffect(() => {
       const loadData = async () => {
         setClient(await getClient(userID));
-        // console.log(client.challenge);
+        console.log(client.challenge);
       };
   
       loadData();
