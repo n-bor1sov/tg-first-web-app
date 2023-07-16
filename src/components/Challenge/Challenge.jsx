@@ -2,19 +2,23 @@ import React, { useState } from "react";
 import "./Challenge.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import firstImage from "../static/0001.png";
-import secondImage from "../static/1.png";
-import thirdImage from "../static/2.png";
 import fourthImage from "../static/3.png";
+import fifthImage from "../static/5.jpg";
+import sixthImage from "../static/6.jpg";
 
 const images = {
-    "0001": firstImage,
-    "8356": secondImage,
-    "0003": thirdImage,
-    "0004": fourthImage,
+    "3422": firstImage,
+    "7732": firstImage,
+    "3646": fourthImage,
+    "6443": fifthImage,
+    "2927": sixthImage,
+    "3046": firstImage,
+    "2243": firstImage,
+    "6344": firstImage,
 };
 
 const Challenge = (item) => {
-  console.log(item);
+  //console.log(item);
 
   const goalCalc = (goal) => {
     let sumGoal = 0;
@@ -25,18 +29,19 @@ const Challenge = (item) => {
   };
 
   const progressCalc = (certain_hours, full_hours, goal) => {
-    console.log(certain_hours, full_hours, goal)
+    //console.log(certain_hours, full_hours, goal)
     let sumProgress = 0;
     for (var key in goal) {
       //console.log(certain_hours)
       if (goal[key] > 0) {
-        if (key != "Summary Hours") {
+        if (key != "Full hours") {
           sumProgress += certain_hours[key];
         } else {
           sumProgress += full_hours;
         }
       }
     }
+    console.log(sumProgress);
     return sumProgress;
   };
 
@@ -50,7 +55,7 @@ const Challenge = (item) => {
     }
   }
 
-  console.log(item);
+  //console.log(item);
   return (
     <div className={box =="short" ? "challenge-short" : "challenge-long"}>
       <div className="row">
