@@ -105,6 +105,41 @@ const getChallenges = () => {
     },
     {
       model: 'challenge',
+      name: 'PE enthusiast',
+      short_description: 'Take part in 20 General physical training sessions',
+      full_description: 'To complete the PE enthusiast challenge you need to take part in 20 General physical training sessions during Fall 2023 semester',
+      xp: 20,
+      sp: 0,
+      goal: {
+        'General Physical Training': 40,
+        'Follow the Bars - Running': 0,
+        'Social Dance': 0,
+        'Functional LCD': 0,
+        'RAGE': 0,
+        'Boxing': 0,
+        'Table tennis - Advanced': 0,
+        'Volleyball': 0,
+        'RAGE - Knights': 0,
+        'Street Dance': 0,
+        'Football': 0,
+        'Sambo': 0,
+        'Tricking club': 0,
+        'Basketball': 0,
+        'Yoga - Stretching': 0,
+        'Tennis': 0,
+        'Yoga - Strength': 0,
+        'Badminton - Advanced': 0,
+        'Badminton - Beginners': 0,
+        'Mixed sports': 0,
+        'Park Run - 5 Verst': 0,
+        'Cricket': 0,
+        'Extra sport events': 0,
+        'Full hours': 0
+      },
+      id: '6344'
+    },
+    {
+      model: 'challenge',
       name: 'Top Sportsman Sum23',
       short_description: 'Get 25 sport hours',
       full_description: 'To complete the challenge Top Sportsmen you need to get 30 sport hours during the Summer23 semester. \n' +
@@ -313,47 +348,12 @@ const getChallenges = () => {
         'Full hours': 0
       },
       id: '2243'
-    },
-    {
-      model: 'challenge',
-      name: 'PE enthusiast',
-      short_description: 'Take part in 20 General physical training sessions',
-      full_description: 'To complete the PE enthusiast challenge you need to take part in 20 General physical training sessions during Fall 2023 semester',
-      xp: 20,
-      sp: 0,
-      goal: {
-        'General Physical Training': 40,
-        'Follow the Bars - Running': 0,
-        'Social Dance': 0,
-        'Functional LCD': 0,
-        'RAGE': 0,
-        'Boxing': 0,
-        'Table tennis - Advanced': 0,
-        'Volleyball': 0,
-        'RAGE - Knights': 0,
-        'Street Dance': 0,
-        'Football': 0,
-        'Sambo': 0,
-        'Tricking club': 0,
-        'Basketball': 0,
-        'Yoga - Stretching': 0,
-        'Tennis': 0,
-        'Yoga - Strength': 0,
-        'Badminton - Advanced': 0,
-        'Badminton - Beginners': 0,
-        'Mixed sports': 0,
-        'Park Run - 5 Verst': 0,
-        'Cricket': 0,
-        'Extra sport events': 0,
-        'Full hours': 0
-      },
-      id: '6344'
     }
   ];
 };
 
 // const finishChallenge = async (userID, sp, xp, challengeID) => {
-//     let result = await fetch("http://localhost:5000/reward", {
+//     let result = await fetch("http://45.131.96.241:5000/reward", {
 //       method: "post",
 //       body: JSON.stringify({
 //         uID : userID,
